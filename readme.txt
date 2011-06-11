@@ -1,7 +1,7 @@
 === poMMo for WordPress ===
 Contributors: topquarky
 Tags: email list, contact management, add-ons, framework
-Requires at least: 3.0
+Requires at least: 2.5
 Tested up to: 3.1.3
 Stable tag: 1.0.0
 
