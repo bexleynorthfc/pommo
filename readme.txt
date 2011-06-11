@@ -98,6 +98,9 @@ No, not really.  The version of poMMo that I forked had internationalization wor
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed fatal error on install if Top Quark Architecture is not installed
+
 = 1.0.0 =
 * Initial check-in
 
@@ -113,6 +116,6 @@ Huge thanks go to Brice Burgess and his team of collaborators for releasing the 
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.1 =
 No upgrade notice
 

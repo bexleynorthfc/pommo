@@ -26,6 +26,9 @@ foreach ($PossiblePaths as $PossiblePath){
 		define('tqp_pathToStandard',$PossiblePath);
 	}
 }
+if (!defined('tqp_pathToStandard')){
+	die(sprintf('This plugin requires the %sTop Quark Architecture%s plugin.  That plugin is available for free from the WordPress repository.  Please install and activate it.','<a href="http://wordpress.org/extend/plugins/topquark" target="_blank">','</a>'));
+}
 // It's confusing, but when in the poMMo admin area, the init() action was getting called (to register/use packages) before PACKAGE_DIRECTORY
 // got defined.  This is a hack and I don't like it, but it works.
 if (!defined('PACKAGE_DIRECTORY')){
