@@ -1,0 +1,15 @@
+INSERT INTO :::fields::: (`field_active`, `field_ordering`, `field_name`, `field_prompt`, `field_normally`, `field_options`, `field_required`, `field_type`) VALUES 
+('on', 1, 'First Name', 'First Name', '', NULL, 'on', 'text'),
+('on', 2, 'Last Name', 'Last Name', '', NULL, 'on', 'text'),
+('off', 3, 'Password', 'Password', '', NULL, 'off', 'text'),
+('on', 11, 'Address 1', 'Address 1', '', NULL, 'off', 'text'),
+('on', 12, 'Address 2', 'Address 2', '', NULL, 'off', 'text'),
+('on', 13, 'City', 'City', '', NULL, 'off', 'text'),
+('on', 14, 'Province/State', 'Province/State', '', 'Alberta,British Columbia,Manitoba,New Brunswick,Newfoundland and Labrador,Northwest Territories,Nova Scotia,Nunavut,Ontario,Prince Edward Island,Quebec,Saskatchewan,Yukon,Alabama,Alaska,Arizona,Arkansas,California,Colorado,Connecticut,Delaware,Dist. of Columbia,Florida,Georgia,Hawaii,Idaho,Illinois,Indiana,Iowa,Kansas,Kentucky,Louisiana,Maine,Maryland,Massachusetts,Michigan,Minnesota,Mississippi,Missouri,Montana,Nebraska,Nevada,New Hampshire,New Jersey,New Mexico,New York,North Carolina,North Dakota,Ohio,Oklahoma,Oregon,Pennsylvania,Rhode Island,South Carolina,South Dakota,Tennessee,Texas,Utah,Vermont,Virginia,Virgin Islands,Washington,West Virginia,Wisconsin,Wyoming,Other', 'off', 'multiple'),
+('on', 15, 'Postal/Zip Code', 'Postal/Zip Code', '', NULL, 'off', 'text'),
+('on', 16, 'Country', 'Country', 'Canada', 'Canada,United States,Other', 'off', 'multiple'),
+('on', 17, 'Other Country', 'If Other', '', NULL, 'off', 'text'),
+('on', 18, 'Primary Phone', 'Primary Phone', '', NULL, 'on', 'text'),
+('on', 19, 'Secondary Phone', 'Secondary Phone', '', NULL, 'off', 'text'),
+('on', 20, 'Other Phone', 'Other Phone', '', NULL, 'off', 'text'),
+('on', 21, 'Fax', 'Fax', '', NULL, 'off', 'text');

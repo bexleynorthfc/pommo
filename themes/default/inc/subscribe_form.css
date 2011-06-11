@@ -1,0 +1,38 @@
+label{
+	font-size:10pt;
+}
+#subscribeForm {
+	width: 100%;
+	text-align:left;
+	margin:0;
+}
+
+#subscribeForm input {
+	background-color:#eeeeee;
+	color:#000000;
+	
+	border:1px solid #aaaaaa;
+
+	padding:3px;
+	margin-bottom:2px;
+}
+
+#subscribeForm input[type=submit] {
+	background-color:#FFFFFF;
+	color:#666666;
+}
+
+#subscribeForm input.text.highlight,
+#subscribeForm textarea.highlight,
+#subscribeForm input.text:focus,
+#subscribeForm textarea:focus
+  {
+    background-color:#ffffff;
+    border-color:#000000;
+    color:#204050;
+  }
+
+
+#subscribeForm .required {
+	font-weight: bold;
+}
