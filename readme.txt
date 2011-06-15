@@ -3,7 +3,7 @@ Contributors: topquarky
 Tags: email list, contact management, add-ons, framework
 Requires at least: 2.5
 Tested up to: 3.1.3
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 
 poMMo for WordPress is an email list and extendable contact management plugin released on the Top Quark architecture
 
@@ -64,7 +64,7 @@ That's it.  Now, add the following shortcode to a Text widget:
 
 = Can subscribers login to change their settings? =
 
-Yes.  You'll need to direct them to the page `<?php plugins_url('poMMo/user/login.php') ?>` (e.g. http://mysite.com/wp-content/plugins/poMMo/login.php)
+Yes.  You'll need to direct them to the page `<?php plugins_url('pommo/user/login.php') ?>` (e.g. http://mysite.com/wp-content/plugins/pommo/login.php)
 
 = My shared host only allows me to send 200 emails/hour.  Can poMMo handle this? =
 
@@ -97,6 +97,9 @@ function my_pommo_groups_for_archives($groups){
 No, not really.  The version of poMMo that I forked had internationalization working well, but I didn't do a good job of keeping it going.  Wanna help?  Find me at [topquark.com](http://topquark.com/)
 
 == Changelog ==
+
+= 1.0.2 =
+* Bug fixes - error on user login
 
 = 1.0.1 =
 * Fixed fatal error on install if Top Quark Architecture is not installed

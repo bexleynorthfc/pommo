@@ -116,7 +116,7 @@ if (!defined('bm_hostname'))
 define('bm_http', ''.(isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ? 'https://' : 'http://').bm_hostname);
 
 // get current "section" -- should be "user" for /user/* files, "mailings" for /admin/mailings/* files, etc. etc.
-define('bm_section',preg_replace('@^.*admin/?@i','',dirname($_SERVER['PHP_SELF'])));
+define('bm_section',preg_replace('@^.*admin/?@i','',str_replace(bm_baseUrl,'',dirname($_SERVER['PHP_SELF']))));
 
 // NOTE -> this is meant to be in class.template.php! -- however, it must remain
 // here until smarty migration is complete or str2db is replaced using:

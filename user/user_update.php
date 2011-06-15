@@ -244,6 +244,5 @@ $smarty->assign('AdminEmail',$config['admin_email']);
 $smarty->assign('selfURL',$_SERVER['SCRIPT_NAME'].'?'.$_SERVER['QUERY_STRING']);
 $smarty->assign('content',$smarty->myFetch('user/user_update.tpl'));
 $smarty->display('user/user_page.tpl');
-var_dump($_SESSION);
 bmKill();
 ?>

@@ -95,6 +95,5 @@ if (defined('bm_PasswordField')){
 
 $smarty->assign('content',$smarty->myFetch('user/login.tpl'));
 $smarty->display('user/user_page.tpl');
-var_dump($_SESSION);
 bmKill();
 ?>
