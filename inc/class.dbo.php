@@ -196,7 +196,9 @@ class dbo {
 	 */
 
 	function & query(& $query, $row = NULL, $col = NULL) {
-                set_time_limit(0);
+		if (!ini_get('safe_mode')){
+            set_time_limit(0);
+		}
 			// execute query
 	$this->_result = mysql_query($query, $this->_link);
 

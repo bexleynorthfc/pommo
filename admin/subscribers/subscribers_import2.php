@@ -51,7 +51,9 @@ if (!empty($_GET['import'])) { // check to see if we should import
 	require_once (bm_baseDir.'/inc/db_subscribers.php');
 	
 	foreach($importArray['valid'] as $subscriber){
-                set_time_limit(0);
+				if (!ini_get('safe_mode')){
+	                set_time_limit(0);
+				}
                 if (isset($subscriber['id']) && $subscriber['id'] !== ""){
                         dbSubscriberUpdate($dbo,$subscriber);
                 }
@@ -63,7 +65,9 @@ if (!empty($_GET['import'])) { // check to see if we should import
 
 	$flagArray = array();
 	foreach($importArray['invalid'] as $subscriber) {
-                set_time_limit(0);
+				if (!ini_get('safe_mode')){
+		            set_time_limit(0);
+				}
                 if (isset($subscriber['id']) && $subscriber['id'] !== ""){
                         dbSubscriberUpdate($dbo,$subscriber);
                 }

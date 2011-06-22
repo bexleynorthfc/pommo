@@ -136,7 +136,9 @@ if (isset ($_GET['cmd'])) {
 				$maxRunTime = ini_get('max_execution_time') - 3;
 				echo 'Safe mode is enabled<br>';
 			}
-			set_time_limit($maxRunTime +5);
+			else{
+				set_time_limit($maxRunTime +5);
+			}
 			echo 'End Run Time: '.ini_get('max_execution_time').' seconds <br>';
 	
 		default :
