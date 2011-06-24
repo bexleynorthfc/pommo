@@ -3,7 +3,7 @@
 Plugin Name: poMMo for WordPress
 Plugin URI: http://wordpress.org/extend/plugins/pommo
 Description: A Top Quark Plugin that integrates a fork of poMMo into Wordpress. Requires the 'topquark' Plugin to be installed and activated.
-Version: 1.0.3
+Version: 1.0.4
 Author: Top Quark
 Author URI: http://topquark.com
 */

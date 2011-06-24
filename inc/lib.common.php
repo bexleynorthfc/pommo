@@ -85,6 +85,9 @@ function bmHttpSpawn($page) {
 	if ($socket) {
 		fwrite($socket,$out);
 	} else {
+		if (function_exists('do_action')){
+			do_action('pommo_fsockopen_failed',$page);
+		}
 		global $logger;
 		$logger->addErr(_T('Error Spawning Page').' ** Errno : Errstr: '.$errno.' : '.$errstr);
 		return false;
@@ -113,6 +116,7 @@ function bmRedirect($url, $msg = NULL, $kill = true) {
 			$url = bm_http . $url;
 		}
 	}
+	$url = apply_filters('pommo_redirect_url',$url);
 	header('Location: ' . $url);
 	if ($kill)
 		if ($msg)

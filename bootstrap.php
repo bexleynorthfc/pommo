@@ -124,7 +124,13 @@ define('bm_section',preg_replace('@^.*admin/?@i','',str_replace(bm_baseUrl,'',di
 //  b) Monte's safeSQL class
 
 		// strip out those bastard slashes
-		if (get_magic_quotes_gpc()) {
+		$magic_quotes_gpc = get_magic_quotes_gpc();
+		if (function_exists('apply_filters')){
+			// this filter was added after bug investigation where the ini setting was off, but the php compile directive --enable-magic-quotes is set.  
+			// This will allow a programmer to override and force the bmStripper function to execute
+			$magic_quotes_gpc = apply_filters('pommo_force_quote_stripper',$magic_quotes_gpc);
+		}
+		if ($magic_quotes_gpc) { 
 			if (!empty($_POST))
 				$_POST = bmStripper($_POST);
 			if (!empty($_GET))
