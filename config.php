@@ -142,11 +142,13 @@ else{
  * To turn Password Authentication on, set this to the name of the 
  * password field 
  */
-if (is_a($poMMo_package,'Package') and isset($poMMo_package->bm_PasswordField)){
-	define('bm_PasswordField',$poMMo_package->bm_PasswordField); 
-}
-else{
-	define('bm_PasswordField','Password'); 
+if (apply_filters('poMMo_use_password_field',true,$poMMo_package)){
+	if (is_a($poMMo_package,'Package') and isset($poMMo_package->bm_PasswordField)){
+		define('bm_PasswordField',$poMMo_package->bm_PasswordField); 
+	}
+	else{
+		define('bm_PasswordField','Password'); 
+	}
 }
  
 /************************************************************************

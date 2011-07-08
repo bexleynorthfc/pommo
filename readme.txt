@@ -3,7 +3,7 @@ Contributors: topquarky
 Tags: email list, contact management, add-ons, framework
 Requires at least: 2.5
 Tested up to: 3.1.3
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 poMMo for WordPress is an email list and extendable contact management plugin released on the Top Quark architecture
 
@@ -97,6 +97,10 @@ function my_pommo_groups_for_archives($groups){
 No, not really.  The version of poMMo that I forked had internationalization working well, but I didn't do a good job of keeping it going.  Wanna help?  Find me at [topquark.com](http://topquark.com/)
 
 == Changelog ==
+
+= 1.0.5 =
+* Added filter to allow disable password.  Do the following:
+`add_filter('poMMo_use_password_field',create_function('$a,$poMMo_Package','return false;'),10,2);`
 
 = 1.0.4 =
 * Added filter to allow customized redirect on login
