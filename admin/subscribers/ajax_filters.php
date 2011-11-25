@@ -171,7 +171,7 @@ if (!empty ($_POST['field_id'])) {
 									<br>
 									<input type="radio" name="logic" value="starts_with"' . checkLogic('starts_with') . '> ' . _T('Starts With') . '
 									<br><br>
-									<input type="text" class="text" name="logic-val" size="30" maxlength="65" value="' . $filter['value'] . '"> 
+									<input type="text" class="text" name="logic-val" size="30" value="' . $filter['value'] . '"> 
 									';
 
 			break;
@@ -194,7 +194,7 @@ if (!empty ($_POST['field_id'])) {
 										</tr>
 									</table>
 						
-									<input type="text" class="text" name="logic-val" size="30" maxlength="65" value="' . $defaultValue[0] . '"> 
+									<input type="text" class="text" name="logic-val" size="30" value="' . $defaultValue[0] . '"> 
 									';
 
 			break;
@@ -217,7 +217,7 @@ if (!empty ($_POST['field_id'])) {
 										</tr>
 									</table>
 						
-									<input type="text" class="text" name="logic-val" size="30" maxlength="65" value="' . $defaultValue[0] . '"> 
+									<input type="text" class="text" name="logic-val" size="30" value="' . $defaultValue[0] . '"> 
 									';
 			break;
 	}

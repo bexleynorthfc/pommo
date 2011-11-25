@@ -87,6 +87,9 @@ if (empty ($smtp[1]))
 // Test the servers
 $addServer = FALSE;
 $smtpStatus = array ();
+if (!is_array($test)){
+	$test = array();
+}
 for ($i = 1; $i < 5; $i++) {
 
 	if (empty ($smtp[$i])) {
