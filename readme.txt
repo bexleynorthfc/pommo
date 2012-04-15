@@ -3,7 +3,7 @@ Contributors: topquarky
 Tags: email list, contact management, add-ons, framework
 Requires at least: 2.5
 Tested up to: 3.1.3
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 
 poMMo for WordPress is an email list and extendable contact management plugin released on the Top Quark architecture
 
@@ -97,6 +97,9 @@ function my_pommo_groups_for_archives($groups){
 No, not really.  The version of poMMo that I forked had internationalization working well, but I didn't do a good job of keeping it going.  Wanna help?  Find me at [topquark.com](http://topquark.com/)
 
 == Changelog ==
+
+= 1.0.8 =
+* Changed how DBO::query returned its value in a certain case.  Returning mysql_result(...) as a reference was causing problems on some configurations of PHP.  Instead, I assign a variable and return that variable.  It seemed to fix the issue.  
 
 = 1.0.7 =
 * Removed maxlength restriction on groups criteria input box in admin area

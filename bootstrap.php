@@ -235,10 +235,13 @@ function & fireup() {
 		bmKill(sprintf(_T('Error loading configuration. Have you %s installed %s ?'),
 			'<a href="'.bm_baseUrl.'install/install.php">',
 			'</a>'));
-	elseif (pommo_revision != $revision)
-		bmKill(sprintf(_T('Version Mismatch. Have you %s upgraded %s ?'),
+	elseif (pommo_revision != $revision){
+		bmKill(sprintf(_T('Version Mismatch. Have you %s upgraded %s ?  Expected version %s and found %s'),
 		'<a href="'.bm_baseUrl.'install/upgrade.php">',
-		'</a>'));
+		'</a>',
+		pommo_revision,
+		$revision));
+	}
 	$poMMo->_dbo->dieOnQuery(TRUE);
 	
 

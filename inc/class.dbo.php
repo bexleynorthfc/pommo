@@ -223,9 +223,10 @@ class dbo {
 			else
 				return false;
 		}
-
-		if (is_numeric($row))
-			return ($this->records()) ? mysql_result($this->_result, $row, $col) : false;
+		if (is_numeric($row)){
+			$return = ($this->records()) ? mysql_result($this->_result, $row, $col) : false;
+			return $return;
+		}
 
 		/*
 		// check if specific field requested, return value.
